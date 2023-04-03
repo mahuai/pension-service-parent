@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: c9bac3cc-2365-485b-9d1b-721c55354c62
+        file-extension: yaml
+        prefix: customer-service
