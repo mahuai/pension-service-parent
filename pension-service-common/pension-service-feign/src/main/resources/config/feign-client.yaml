@@ -1,0 +1,16 @@
+usercenter:
+  feign-client:
+    propagate-headers: ["cid", "mobile","x-trace-id", "x-uc-principal"]
+
+#默认开启失败重试
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+        max-retries-on-next-service-instance: 3
+        retry-on-all-operations: true
+  servlet:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB

@@ -1,8 +1,8 @@
 package com.pension.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.pension.params.CustomerRegisterParams;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: mashuai
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
 
     @PostMapping("/register")
-    public void register(){
+    public void register(@Validated  @RequestBody CustomerRegisterParams params){
 
     }
 }
